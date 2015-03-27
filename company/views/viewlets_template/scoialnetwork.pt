@@ -1,0 +1,14 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_social_network">
+
+    <a class="facebook" target="_blank"
+       tal:condition="nocall:profile/facebook" tal:attributes="href profile/facebook">Facebook</a>
+    <a class="googleplus" target="_blank"
+       tal:condition="nocall:profile/googlePlus" tal:attributes="href profile/googlePlus">Google+</a>
+    <a class="twitter" target="_blank"
+       tal:condition="nocall:profile/twitter" tal:attributes="href profile/twitter">Twitter</a>
+    <a class="linkedin" target="_blank"
+       tal:condition="nocall:profile/linkedin" tal:attributes="href profile/linkedin">LinkedIn</a>
+
+  </div>
+</tal:profile>

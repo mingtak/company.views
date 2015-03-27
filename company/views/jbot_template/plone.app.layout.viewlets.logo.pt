@@ -1,0 +1,14 @@
+<tal:profile define="profile context/@@getprofile">
+
+<a id="portal-logo"
+   title="Home"
+   accesskey="1"
+   tal:attributes="href view/navigation_root_url;
+                   title profile/Title"
+   i18n:domain="plone"
+   i18n:attributes="title">
+    <img tal:attributes="src string:${profile/absolute_url}/@@images/logo/mini;
+                         alt profile/Title" />
+
+</a>
+</tal:profile>

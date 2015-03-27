@@ -1,0 +1,7 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_fbmessage" tal:condition="nocall:profile/fbMessage">
+
+    <div class="fbmessage" tal:content="structure profile/fbMessage" />
+
+  </div>
+</tal:profile>

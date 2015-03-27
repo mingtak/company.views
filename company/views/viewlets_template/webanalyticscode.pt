@@ -1,0 +1,7 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_webanalyticscode" tal:condition="nocall:profile/webAnalyticsCode">
+
+    <div class="webanalyticscode" tal:content="structure profile/webAnalyticsCode" />
+
+  </div>
+</tal:profile>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.belowcontent" skinname="*">
+    <viewlet name="plone.comments"/>
+    <viewlet name="plone.manage_portlets_fallback"/>
+    <viewlet name="plone.nextprevious"/>
+    <viewlet name="plone.belowcontenttitle.keywords"/>
+
+    <viewlet name="fbmessage_ibelowcontent_idocument"/>
+    <viewlet name="disqus_ibelowcontent_idocument"/>
+
+    <viewlet name="fbmessage_ibelowcontent_iproductpage"/>
+    <viewlet name="disqus_ibelowcontent_iproductpage"/>
+
+    <viewlet name="fbmessage_ibelowcontent_ievent"/>
+    <viewlet name="disqus_ibelowcontent_ievent"/>
+
+    <viewlet name="fbmessage_ibelowcontent_inewsitem"/>
+    <viewlet name="disqus_ibelowcontent_inewsitem"/>
+  </order>
+</object>

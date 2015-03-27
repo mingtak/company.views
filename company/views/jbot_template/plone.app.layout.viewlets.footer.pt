@@ -1,0 +1,7 @@
+<div i18n:domain="plone"
+     id="portal-footer">
+
+  <tal:profile define="profile context/@@getprofile"
+               replace="structure profile/copyright/raw" />
+
+</div>

@@ -1,0 +1,7 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_addthis" tal:condition="nocall:profile/addthis">
+
+    <div class="addthis" tal:content="structure profile/addthis" />
+
+  </div>
+</tal:profile>

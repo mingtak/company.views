@@ -1,0 +1,11 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_contact">
+
+    <p class="address" tal:condition="nocall:profile/address" tal:content="profile/address" />
+    <p class="phone_no" tal:condition="nocall:profile/phoneNo" tal:content="profile/phoneNo" />
+    <p class="service_phone" tal:condition="nocall:profile/servicePhone" tal:content="profile/servicePhone" />
+    <p class="fax_no" tal:condition="nocall:profile/faxNo" tal:content="profile/faxNo" />
+    <p class="email_addr" tal:condition="nocall:profile/emailAddr" tal:content="profile/emailAddr" />
+
+  </div>
+</tal:profile>

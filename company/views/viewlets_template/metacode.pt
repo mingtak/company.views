@@ -1,0 +1,5 @@
+<tal:profile define="profile context/@@getprofile" condition="nocall:profile/metaCode">
+
+    <tal:meta replace="structure profile/metaCode" />
+
+</tal:profile>

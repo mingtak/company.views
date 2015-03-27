@@ -1,0 +1,7 @@
+<tal:profile define="profile context/@@getprofile">
+  <div id="company_site_disqus" tal:condition="nocall:profile/disqus">
+
+    <div class="disqus" tal:content="structure profile/disqus" />
+
+  </div>
+</tal:profile>
