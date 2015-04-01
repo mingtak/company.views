@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="company.content">
+<body>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+
+    <h2 i18n:translate="">Search Results</h2>
+
+    <tal:result define="brain view/brain;
+                        start python:int(getattr(request, 'start', 0));
+                        Previous python:(start-20) if (start-20)>=0 else 0;
+                        next python:start+20">
+      <p tal:repeat="item python:brain[start:start+20]">
+        <a tal:content="item/Title"
+           tal:condition="python:len(brain)>0"
+           tal:attributes="href item/getURL;
+                           title item/Title"/>
+
+      </p>
+      <a tal:condition="python:start>0"
+         tal:attributes="href string:@@searchpage?SearchableText=${request/SearchableText}&start=${Previous}"
+         i18n:translate="">Previous Page</a>
+
+      <a tal:condition="python:len(brain[start:start+20])==20"
+         tal:attributes="href string:@@searchpage?SearchableText=${request/SearchableText}&start=${next}"
+         i18n:translate="">Next Page</a>
+
+    </tal:result>
+
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>

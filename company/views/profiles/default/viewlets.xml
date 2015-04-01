@@ -18,4 +18,10 @@
     <viewlet name="fbmessage_ibelowcontent_inewsitem"/>
     <viewlet name="disqus_ibelowcontent_inewsitem"/>
   </order>
+
+<!--
+  <hidden manager="plone.portalheader" skinname="*">
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+  </hidden>
+-->
 </object>

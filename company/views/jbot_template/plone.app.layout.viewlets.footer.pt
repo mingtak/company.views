@@ -2,6 +2,6 @@
      id="portal-footer">
 
   <tal:profile define="profile context/@@getprofile"
-               replace="structure profile/copyright/raw" />
+               replace="structure profile/copyright | string:" />
 
 </div>
